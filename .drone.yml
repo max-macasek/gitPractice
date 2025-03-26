@@ -1,0 +1,15 @@
+kind: pipeline
+type: docker
+name: debug
+
+server:
+  host: drone.maxmacasek.com
+  user: root
+
+steps:
+  - name: debug-step
+    image: alpine
+    commands:
+      - echo "Step started"
+      - sleep 5
+      - echo "Step completed"
